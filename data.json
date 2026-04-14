@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-14T12:00:01.012Z",
+  "generated": "2026-04-14T13:00:00.975Z",
   "strategies": [
     {
       "name": "MNQ ORB 15-min",
@@ -98,7 +98,7 @@
           }
         ]
       },
-      "totalTrades": 2
+      "totalTrades": 3
     }
   ]
 }
