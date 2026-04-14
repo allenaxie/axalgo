@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-14T09:00:00.657Z",
+  "generated": "2026-04-14T10:00:01.173Z",
   "strategies": [
     {
       "name": "MNQ ORB 15-min",
@@ -79,8 +79,26 @@
       "type": "BTC",
       "tf": "15min",
       "style": "Momentum",
-      "stats": null,
-      "totalTrades": 1
+      "stats": {
+        "trades": 1,
+        "wins": 1,
+        "losses": 0,
+        "winRate": 100,
+        "totalPnl": 63.53,
+        "avgWin": 63.53,
+        "avgLoss": 0,
+        "profitFactor": null,
+        "maxDrawdown": 0,
+        "recent": [
+          {
+            "date": "14 Apr 2026",
+            "side": "SELL",
+            "pnl": 63.53,
+            "reason": "StochRSI overbought exit (K:87.0) 🔴"
+          }
+        ]
+      },
+      "totalTrades": 2
     }
   ]
 }
