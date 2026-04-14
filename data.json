@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-14T14:00:00.351Z",
+  "generated": "2026-04-14T14:18:05.056Z",
   "strategies": [
     {
       "name": "MNQ ORB 15-min",
@@ -71,7 +71,7 @@
       "tf": "1H",
       "style": "Momentum",
       "stats": null,
-      "totalTrades": 0
+      "totalTrades": 1
     },
     {
       "name": "BTC StochRSI",
@@ -92,13 +92,13 @@
         "recent": [
           {
             "date": "14 Apr 2026",
-            "side": "SELL",
+            "side": "LONG",
             "pnl": 100,
             "reason": "Take profit ✅"
           },
           {
             "date": "14 Apr 2026",
-            "side": "SELL",
+            "side": "LONG",
             "pnl": 63.53,
             "reason": "StochRSI overbought exit (K:87.0) 🔴"
           }
