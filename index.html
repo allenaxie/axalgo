@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AlgoEdge — Automated Trading Signals</title>
+  <meta name="description" content="Algorithmic trading signals for BTC and MNQ futures. Transparent live track record. Join the waitlist." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0a0c0f;
+      --surface:  #111318;
+      --border:   #1e2128;
+      --text:     #e8eaf0;
+      --muted:    #6b7280;
+      --green:    #22c55e;
+      --red:      #ef4444;
+      --blue:     #3b82f6;
+      --accent:   #6366f1;
+      --gold:     #f59e0b;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,12,15,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px;
+    }
+    .nav-logo { font-weight: 700; font-size: 18px; letter-spacing: -0.5px; color: var(--text); }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); font-size: 14px; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--text); text-decoration: none; }
+    .nav-cta {
+      background: var(--accent); color: #fff; padding: 8px 20px;
+      border-radius: 8px; font-size: 14px; font-weight: 600;
+      transition: opacity .2s;
+    }
+    .nav-cta:hover { opacity: .85; text-decoration: none; }
+
+    /* ── Hero ── */
+    .hero {
+      max-width: 860px; margin: 0 auto;
+      padding: 100px 24px 80px;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(99,102,241,.12); border: 1px solid rgba(99,102,241,.3);
+      color: #a5b4fc; padding: 5px 14px; border-radius: 999px;
+      font-size: 13px; font-weight: 500; margin-bottom: 28px;
+    }
+    .hero-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+    h1 {
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 700; line-height: 1.15;
+      letter-spacing: -1.5px; margin-bottom: 20px;
+    }
+    h1 em { font-style: normal; color: var(--accent); }
+    .hero-sub {
+      color: var(--muted); font-size: 18px; max-width: 560px;
+      margin: 0 auto 40px; line-height: 1.7;
+    }
+    .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--accent); color: #fff;
+      padding: 14px 32px; border-radius: 10px;
+      font-size: 15px; font-weight: 600; border: none; cursor: pointer;
+      transition: opacity .2s; display: inline-block;
+    }
+    .btn-primary:hover { opacity: .85; text-decoration: none; }
+    .btn-secondary {
+      background: transparent; color: var(--text);
+      padding: 14px 32px; border-radius: 10px;
+      font-size: 15px; font-weight: 600;
+      border: 1px solid var(--border); cursor: pointer;
+      transition: border-color .2s; display: inline-block;
+    }
+    .btn-secondary:hover { border-color: var(--muted); text-decoration: none; }
+
+    /* ── Stats strip ── */
+    .stats-strip {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+      padding: 28px 24px;
+    }
+    .stats-inner {
+      max-width: 900px; margin: 0 auto;
+      display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;
+    }
+    .stat-card {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: 12px; padding: 20px 28px; text-align: center;
+      min-width: 160px; flex: 1;
+    }
+    .stat-value { font-size: 28px; font-weight: 700; font-family: "JetBrains Mono", monospace; }
+    .stat-value.green { color: var(--green); }
+    .stat-value.gold  { color: var(--gold); }
+    .stat-label { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .05em; }
+
+    /* ── Section ── */
+    section { max-width: 960px; margin: 0 auto; padding: 80px 24px; }
+    .section-tag {
+      font-size: 12px; font-weight: 600; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 12px;
+    }
+    h2 { font-size: clamp(24px, 3vw, 36px); font-weight: 700; letter-spacing: -.5px; margin-bottom: 12px; }
+    .section-sub { color: var(--muted); font-size: 16px; margin-bottom: 40px; }
+
+    /* ── Performance table ── */
+    .table-wrap { overflow-x: auto; border-radius: 12px; border: 1px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; }
+    thead { background: var(--surface); }
+    th {
+      padding: 12px 16px; text-align: left;
+      font-size: 11px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: .06em; color: var(--muted);
+      border-bottom: 1px solid var(--border);
+    }
+    td { padding: 14px 16px; font-size: 14px; border-bottom: 1px solid var(--border); }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: rgba(255,255,255,.02); }
+    .mono { font-family: "JetBrains Mono", monospace; font-size: 13px; }
+    .badge {
+      display: inline-block; padding: 2px 8px; border-radius: 4px;
+      font-size: 11px; font-weight: 600;
+    }
+    .badge-mnq  { background: rgba(59,130,246,.15);  color: #93c5fd; }
+    .badge-btc  { background: rgba(245,158,11,.15);  color: #fcd34d; }
+    .badge-trend    { background: rgba(99,102,241,.12); color: #a5b4fc; }
+    .badge-momentum { background: rgba(168,85,247,.12); color: #d8b4fe; }
+    .badge-breakout { background: rgba(34,197,94,.12);  color: #86efac; }
+    .badge-reversal { background: rgba(239,68,68,.12);  color: #fca5a5; }
+    .pnl-pos { color: var(--green); font-weight: 600; }
+    .pnl-neg { color: var(--red);   font-weight: 600; }
+    .pnl-none{ color: var(--muted); }
+    .winner-row td:first-child { border-left: 3px solid var(--gold); }
+
+    /* ── No data ── */
+    .no-data { text-align: center; padding: 48px; color: var(--muted); }
+    .no-data .icon { font-size: 32px; margin-bottom: 12px; }
+
+    /* ── How it works ── */
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .step {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 28px;
+    }
+    .step-num {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(99,102,241,.15); color: var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 15px; margin-bottom: 16px;
+    }
+    .step h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+    .step p  { color: var(--muted); font-size: 14px; line-height: 1.6; }
+
+    /* ── Waitlist ── */
+    .waitlist-section {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 80px 24px;
+    }
+    .waitlist-inner { max-width: 560px; margin: 0 auto; text-align: center; }
+    .waitlist-inner h2 { margin-bottom: 12px; }
+    .waitlist-inner p { color: var(--muted); margin-bottom: 32px; }
+    .waitlist-form { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+    .waitlist-form input {
+      flex: 1; min-width: 240px;
+      background: var(--bg); border: 1px solid var(--border);
+      color: var(--text); padding: 13px 18px; border-radius: 10px;
+      font-size: 15px; outline: none; transition: border-color .2s;
+      font-family: "Inter", sans-serif;
+    }
+    .waitlist-form input:focus { border-color: var(--accent); }
+    .waitlist-form input::placeholder { color: var(--muted); }
+    #waitlist-msg { margin-top: 16px; font-size: 14px; color: var(--green); min-height: 20px; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 24px;
+      text-align: center;
+      color: var(--muted); font-size: 13px;
+    }
+    .footer-disclaimer {
+      max-width: 680px; margin: 0 auto 16px;
+      line-height: 1.7; font-size: 12px;
+    }
+
+    /* ── Updated time ── */
+    .updated { font-size: 12px; color: var(--muted); margin-top: 12px; }
+
+    /* ── Loading ── */
+    .loading { text-align: center; padding: 48px; color: var(--muted); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      h1 { letter-spacing: -1px; }
+      .hero { padding: 60px 20px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+  <div class="nav-logo">Algo<span>Edge</span></div>
+  <div class="nav-links">
+    <a href="#performance">Performance</a>
+    <a href="#how">How it works</a>
+    <a href="#waitlist">Pricing</a>
+  </div>
+  <a href="#waitlist" class="nav-cta">Join waitlist</a>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-badge">
+    <span class="dot"></span>
+    Live paper trading — track record updating daily
+  </div>
+  <h1>Algorithmic signals for<br /><em>BTC & MNQ futures</em></h1>
+  <p class="hero-sub">
+    Seven strategies running 24/7. Fully automated, fully transparent.
+    No black boxes — every trade is logged and published in real time.
+  </p>
+  <div class="hero-actions">
+    <a href="#performance" class="btn-primary">View live results</a>
+    <a href="#how" class="btn-secondary">How it works</a>
+  </div>
+</div>
+
+<!-- Stats strip -->
+<div class="stats-strip">
+  <div class="stats-inner" id="stats-strip">
+    <div class="loading">Loading stats…</div>
+  </div>
+</div>
+
+<!-- Performance -->
+<section id="performance">
+  <div class="section-tag">Track record</div>
+  <h2>Live strategy performance</h2>
+  <p class="section-sub">All trades are paper-traded first. Results update every hour from live market data.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Strategy</th>
+          <th>Asset</th>
+          <th>Timeframe</th>
+          <th>Style</th>
+          <th>Trades</th>
+          <th>Win rate</th>
+          <th>Total P&L</th>
+          <th>Profit factor</th>
+          <th>Avg win</th>
+          <th>Max DD</th>
+        </tr>
+      </thead>
+      <tbody id="perf-table-body">
+        <tr><td colspan="10" class="loading">Loading performance data…</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="updated" id="updated-time"></p>
+</section>
+
+<!-- How it works -->
+<section id="how">
+  <div class="section-tag">How it works</div>
+  <h2>Simple, transparent, automated</h2>
+  <p class="section-sub">Signals are generated by code — no emotions, no discretion.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h3>Strategy fires</h3>
+      <p>Bots check live market data every 5–60 minutes depending on timeframe. When conditions are met, a signal is generated.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h3>Signal posted</h3>
+      <p>Entry price, stop loss, and take profit levels are posted instantly to Discord. Every trade is logged publicly.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h3>You follow along</h3>
+      <p>Place the trade manually on your broker, or let the bot execute automatically via API (Coinbase for BTC).</p>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <h3>Results tracked</h3>
+      <p>Every exit — win or loss — is recorded here. No cherry-picking. The full track record is always public.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Waitlist -->
+<div class="waitlist-section" id="waitlist">
+  <div class="waitlist-inner">
+    <div class="section-tag" style="text-align:center">Early access</div>
+    <h2>Join the waitlist</h2>
+    <p>Currently in testing. Launching soon at <strong style="color:var(--text)">$29/month</strong> for Discord signal access. Founding members get 50% off — forever.</p>
+    <form class="waitlist-form" id="waitlist-form">
+      <input type="email" id="email-input" placeholder="your@email.com" required />
+      <button type="submit" class="btn-primary">Get early access</button>
+    </form>
+    <div id="waitlist-msg"></div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p class="footer-disclaimer">
+    Past performance is not indicative of future results. All results shown are from paper trading simulations
+    and do not represent real money trades. Trading involves significant risk of loss. Only trade with capital
+    you can afford to lose.
+  </p>
+  <p>© 2026 AlgoEdge · Built with Node.js &amp; love for markets</p>
+</footer>
+
+<script>
+  // ── Load data.json and render ──────────────────────────────────────────────
+  async function loadData() {
+    try {
+      const res  = await fetch("data.json?t=" + Date.now());
+      const data = await res.json();
+      renderStats(data);
+      renderTable(data);
+      document.getElementById("updated-time").textContent =
+        "Last updated: " + new Date(data.generated).toLocaleString("en-GB", {
+          day:"2-digit", month:"short", year:"numeric",
+          hour:"2-digit", minute:"2-digit", hour12:false,
+          timeZone: "Asia/Singapore",
+        }) + " GMT+8";
+    } catch (e) {
+      document.getElementById("perf-table-body").innerHTML =
+        `<tr><td colspan="10" class="no-data"><div class="icon">📊</div>Performance data loading — check back soon.</td></tr>`;
+      document.getElementById("stats-strip").innerHTML =
+        `<p style="color:var(--muted);text-align:center">Stats loading…</p>`;
+    }
+  }
+
+  function fmt(n, prefix="$") {
+    if (n === null || n === undefined) return "—";
+    const abs = Math.abs(n).toFixed(2);
+    return (n >= 0 ? "+" : "-") + prefix + abs;
+  }
+
+  function renderStats(data) {
+    const all    = data.strategies.filter(s => s.stats);
+    const trades = all.reduce((a,s)=>a+s.stats.trades, 0);
+    const totalPnl = all.reduce((a,s)=>a+s.stats.totalPnl, 0);
+    const wins   = all.reduce((a,s)=>a+s.stats.wins, 0);
+    const wr     = trades ? (wins/trades*100).toFixed(1) : "—";
+
+    const strip = document.getElementById("stats-strip");
+    strip.innerHTML = `
+      <div class="stat-card">
+        <div class="stat-value gold">${data.strategies.length}</div>
+        <div class="stat-label">Strategies live</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">${trades || "—"}</div>
+        <div class="stat-label">Completed trades</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value ${totalPnl>=0?"green":""}">${trades ? fmt(totalPnl) : "—"}</div>
+        <div class="stat-label">Combined P&L</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">${trades ? wr+"%" : "—"}</div>
+        <div class="stat-label">Overall win rate</div>
+      </div>
+    `;
+  }
+
+  function renderTable(data) {
+    const tbody = document.getElementById("perf-table-body");
+    const withData = data.strategies.filter(s=>s.stats);
+    const bestPnl  = withData.length ? Math.max(...withData.map(s=>s.stats.totalPnl)) : null;
+
+    const rows = data.strategies.map(s => {
+      const st = s.stats;
+      const isWinner = st && bestPnl !== null && st.totalPnl === bestPnl && withData.length > 1;
+      if (!st) {
+        return `<tr>
+          <td><strong>${s.name}</strong></td>
+          <td><span class="badge badge-${s.type.toLowerCase()}">${s.type}</span></td>
+          <td class="mono">${s.tf}</td>
+          <td><span class="badge badge-${s.style.toLowerCase()}">${s.style}</span></td>
+          <td colspan="6" class="pnl-none" style="font-size:13px">No completed trades yet</td>
+        </tr>`;
+      }
+      const pnlClass = st.totalPnl > 0 ? "pnl-pos" : st.totalPnl < 0 ? "pnl-neg" : "pnl-none";
+      return `<tr class="${isWinner?"winner-row":""}">
+        <td><strong>${s.name}</strong>${isWinner?' <span style="color:var(--gold);font-size:12px">🏆 Leading</span>':''}</td>
+        <td><span class="badge badge-${s.type.toLowerCase()}">${s.type}</span></td>
+        <td class="mono">${s.tf}</td>
+        <td><span class="badge badge-${s.style.toLowerCase()}">${s.style}</span></td>
+        <td class="mono">${st.trades} <span style="color:var(--muted);font-size:12px">(${st.wins}W/${st.losses}L)</span></td>
+        <td class="mono">${st.winRate}%</td>
+        <td class="mono ${pnlClass}">${fmt(st.totalPnl)}</td>
+        <td class="mono">${st.profitFactor !== null ? st.profitFactor+"×" : "—"}</td>
+        <td class="mono" style="color:var(--green)">+$${st.avgWin.toFixed(2)}</td>
+        <td class="mono" style="color:var(--muted)">$${st.maxDrawdown.toFixed(2)}</td>
+      </tr>`;
+    });
+
+    tbody.innerHTML = rows.join("") || `<tr><td colspan="10" class="no-data">No data yet</td></tr>`;
+  }
+
+  // ── Waitlist form ──────────────────────────────────────────────────────────
+  document.getElementById("waitlist-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const email = document.getElementById("email-input").value;
+    // TODO: replace with your Mailchimp / Loops / ConvertKit form URL
+    // For now, store locally and show confirmation
+    const saved = JSON.parse(localStorage.getItem("waitlist") || "[]");
+    if (!saved.includes(email)) { saved.push(email); localStorage.setItem("waitlist", JSON.stringify(saved)); }
+    document.getElementById("waitlist-msg").textContent = "✅ You're on the list! We'll be in touch before launch.";
+    document.getElementById("email-input").value = "";
+  });
+
+  loadData();
+</script>
+</body>
+</html>
