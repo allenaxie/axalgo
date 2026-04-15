@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-15T18:00:02.763Z",
+  "generated": "2026-04-15T18:14:08.044Z",
   "strategies": [
     {
       "name": "MNQ ORB 15-min",
@@ -108,6 +108,15 @@
         ]
       },
       "totalTrades": 2
+    },
+    {
+      "name": "MNQ Follow 9:40",
+      "file": "mnq/follow940-trades.csv",
+      "type": "MNQ",
+      "tf": "5min",
+      "style": "Momentum",
+      "stats": null,
+      "totalTrades": 0
     },
     {
       "name": "BTC Supertrend",
