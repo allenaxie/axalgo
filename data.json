@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-15T18:36:23.258Z",
+  "generated": "2026-04-15T19:00:00.834Z",
   "strategies": [
     {
       "name": "MNQ ORB 15-min",
@@ -8,12 +8,12 @@
       "tf": "15min",
       "style": "Breakout",
       "stats": {
-        "trades": 3,
-        "wins": 3,
+        "trades": 1,
+        "wins": 1,
         "losses": 0,
         "winRate": 100,
-        "totalPnl": 722,
-        "avgWin": 240.67,
+        "totalPnl": 200,
+        "avgWin": 200,
         "avgLoss": 0,
         "profitFactor": null,
         "maxDrawdown": 0,
@@ -23,22 +23,10 @@
             "side": "LONG",
             "pnl": 200,
             "reason": "Take profit hit ✅"
-          },
-          {
-            "date": "14 Apr 2026",
-            "side": "LONG",
-            "pnl": 200,
-            "reason": "Take profit hit ✅"
-          },
-          {
-            "date": "13 Apr 2026",
-            "side": "LONG",
-            "pnl": 322,
-            "reason": "Force close 3:55pm ET"
           }
         ]
       },
-      "totalTrades": 3
+      "totalTrades": 1
     },
     {
       "name": "MNQ ORB 5-min",
@@ -47,25 +35,31 @@
       "tf": "5min",
       "style": "Breakout",
       "stats": {
-        "trades": 1,
-        "wins": 1,
-        "losses": 0,
-        "winRate": 100,
-        "totalPnl": 120,
-        "avgWin": 120,
-        "avgLoss": 0,
+        "trades": 2,
+        "wins": 0,
+        "losses": 2,
+        "winRate": 0,
+        "totalPnl": -120,
+        "avgWin": 0,
+        "avgLoss": -60,
         "profitFactor": null,
-        "maxDrawdown": 0,
+        "maxDrawdown": 120,
         "recent": [
           {
             "date": "15 Apr 2026",
             "side": "LONG",
-            "pnl": 120,
-            "reason": "Take profit ✅"
+            "pnl": -60,
+            "reason": "Stop loss hit 🛑"
+          },
+          {
+            "date": "13 Apr 2026",
+            "side": "SHORT",
+            "pnl": -60,
+            "reason": "Stop loss hit 🛑"
           }
         ]
       },
-      "totalTrades": 1
+      "totalTrades": 2
     },
     {
       "name": "MNQ VWAP Reversal",
