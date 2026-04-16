@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-16T01:00:01.817Z",
+  "generated": "2026-04-16T01:11:55.275Z",
   "strategies": [
     {
       "name": "MNQ ORB 15-min",
@@ -8,25 +8,49 @@
       "tf": "15min",
       "style": "Breakout",
       "stats": {
-        "trades": 1,
-        "wins": 1,
-        "losses": 0,
-        "winRate": 100,
-        "totalPnl": 200,
-        "avgWin": 200,
-        "avgLoss": 0,
-        "profitFactor": null,
-        "maxDrawdown": 0,
+        "trades": 43,
+        "wins": 13,
+        "losses": 30,
+        "winRate": 30.2,
+        "totalPnl": -421.5,
+        "avgWin": 198.35,
+        "avgLoss": -100,
+        "profitFactor": 0.86,
+        "maxDrawdown": 1121.5,
         "recent": [
           {
             "date": "15 Apr 2026",
             "side": "LONG",
             "pnl": 200,
             "reason": "Take profit hit ✅"
+          },
+          {
+            "date": "14 Apr 2026",
+            "side": "LONG",
+            "pnl": 200,
+            "reason": "Take profit hit ✅"
+          },
+          {
+            "date": "10 Apr 2026",
+            "side": "SHORT",
+            "pnl": -100,
+            "reason": "Stop loss hit 🛑"
+          },
+          {
+            "date": "09 Apr 2026",
+            "side": "SHORT",
+            "pnl": -100,
+            "reason": "Stop loss hit 🛑"
+          },
+          {
+            "date": "08 Apr 2026",
+            "side": "SHORT",
+            "pnl": 200,
+            "reason": "Take profit hit ✅"
           }
         ]
       },
-      "totalTrades": 1
+      "totalTrades": 43
     },
     {
       "name": "MNQ ORB 5-min",
