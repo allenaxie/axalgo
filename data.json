@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-16T07:00:01.199Z",
+  "generated": "2026-04-16T08:00:00.364Z",
   "strategies": [
     {
       "name": "MNQ ORB 15-min",
@@ -138,11 +138,11 @@
         "wins": 20,
         "losses": 37,
         "winRate": 35.1,
-        "totalPnl": 2823,
-        "avgWin": 382.15,
+        "totalPnl": 3239.5,
+        "avgWin": 402.98,
         "avgLoss": -130.27,
-        "profitFactor": 1.59,
-        "maxDrawdown": 1476,
+        "profitFactor": 1.67,
+        "maxDrawdown": 1235,
         "recent": [
           {
             "date": "14 Apr 2026",
