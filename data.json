@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-16T15:06:21.494Z",
+  "generated": "2026-04-16T15:56:08.278Z",
   "strategies": [
     {
       "name": "MNQ ORB 15-min",
@@ -101,16 +101,22 @@
       "tf": "5min",
       "style": "Trend",
       "stats": {
-        "trades": 2,
-        "wins": 0,
+        "trades": 3,
+        "wins": 1,
         "losses": 2,
-        "winRate": 0,
-        "totalPnl": -100,
-        "avgWin": 0,
+        "winRate": 33.3,
+        "totalPnl": 0,
+        "avgWin": 100,
         "avgLoss": -50,
-        "profitFactor": null,
+        "profitFactor": 1,
         "maxDrawdown": 100,
         "recent": [
+          {
+            "date": "16 Apr 2026",
+            "side": "LONG",
+            "pnl": 100,
+            "reason": "Take profit ✅"
+          },
           {
             "date": "16 Apr 2026",
             "side": "SHORT",
@@ -125,7 +131,7 @@
           }
         ]
       },
-      "totalTrades": 2
+      "totalTrades": 3
     },
     {
       "name": "MNQ Follow 9:40",
@@ -134,21 +140,21 @@
       "tf": "5min",
       "style": "Momentum",
       "stats": {
-        "trades": 58,
-        "wins": 20,
-        "losses": 38,
-        "winRate": 34.5,
-        "totalPnl": 3239.5,
-        "avgWin": 402.98,
-        "avgLoss": -126.84,
-        "profitFactor": 1.67,
-        "maxDrawdown": 1235,
+        "trades": 54,
+        "wins": 26,
+        "losses": 28,
+        "winRate": 48.1,
+        "totalPnl": 4152,
+        "avgWin": 362.96,
+        "avgLoss": -188.75,
+        "profitFactor": 1.79,
+        "maxDrawdown": 956.5,
         "recent": [
           {
             "date": "16 Apr 2026",
             "side": "LONG",
-            "pnl": 0,
-            "reason": "Stop loss 🛑"
+            "pnl": 270,
+            "reason": "Take profit ✅"
           },
           {
             "date": "14 Apr 2026",
@@ -176,7 +182,7 @@
           }
         ]
       },
-      "totalTrades": 58
+      "totalTrades": 54
     },
     {
       "name": "BTC Supertrend",
