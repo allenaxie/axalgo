@@ -1,9 +1,9 @@
 {
-  "generated": "2026-04-16T02:21:01.089Z",
+  "generated": "2026-04-16T02:40:28.236Z",
   "strategies": [
     {
       "name": "MNQ ORB 15-min",
-      "file": "mnq/trades.csv",
+      "file": "mnq/orb15-trades.csv",
       "type": "MNQ",
       "tf": "15min",
       "style": "Breakout",
