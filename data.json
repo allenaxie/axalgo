@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-17T01:00:00.460Z",
+  "generated": "2026-04-17T02:00:01.193Z",
   "strategies": [
     {
       "name": "MNQ ORB 15-min",
@@ -233,16 +233,22 @@
       "tf": "15min",
       "style": "Momentum",
       "stats": {
-        "trades": 869,
+        "trades": 870,
         "wins": 281,
-        "losses": 588,
+        "losses": 589,
         "winRate": 32.3,
-        "totalPnl": 1473.83,
+        "totalPnl": 1423.83,
         "avgWin": 99.07,
-        "avgLoss": -44.84,
-        "profitFactor": 1.06,
+        "avgLoss": -44.85,
+        "profitFactor": 1.05,
         "maxDrawdown": 2095.74,
         "recent": [
+          {
+            "date": "17 Apr 2026",
+            "side": "LONG",
+            "pnl": -50,
+            "reason": "Stop loss 🛑"
+          },
           {
             "date": "16 Apr 2026",
             "side": "LONG",
@@ -266,16 +272,10 @@
             "side": "LONG",
             "pnl": -50,
             "reason": "Stop loss 🛑"
-          },
-          {
-            "date": "15 Apr 2026",
-            "side": "LONG",
-            "pnl": -23.02,
-            "reason": "StochRSI overbought exit (K:83.3) 🔴"
           }
         ]
       },
-      "totalTrades": 1739
+      "totalTrades": 1740
     }
   ]
 }
