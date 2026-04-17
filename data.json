@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-17T08:00:01.041Z",
+  "generated": "2026-04-17T09:00:00.711Z",
   "strategies": [
     {
       "name": "MNQ ORB 15-min",
@@ -7,50 +7,8 @@
       "type": "MNQ",
       "tf": "15min",
       "style": "Breakout",
-      "stats": {
-        "trades": 44,
-        "wins": 13,
-        "losses": 31,
-        "winRate": 29.5,
-        "totalPnl": -521.5,
-        "avgWin": 198.35,
-        "avgLoss": -100,
-        "profitFactor": 0.83,
-        "maxDrawdown": 1121.5,
-        "recent": [
-          {
-            "date": "16 Apr 2026",
-            "side": "SHORT",
-            "pnl": -100,
-            "reason": "Stop loss hit 🛑"
-          },
-          {
-            "date": "15 Apr 2026",
-            "side": "LONG",
-            "pnl": 200,
-            "reason": "Take profit hit ✅"
-          },
-          {
-            "date": "14 Apr 2026",
-            "side": "LONG",
-            "pnl": 200,
-            "reason": "Take profit hit ✅"
-          },
-          {
-            "date": "10 Apr 2026",
-            "side": "SHORT",
-            "pnl": -100,
-            "reason": "Stop loss hit 🛑"
-          },
-          {
-            "date": "09 Apr 2026",
-            "side": "SHORT",
-            "pnl": -100,
-            "reason": "Stop loss hit 🛑"
-          }
-        ]
-      },
-      "totalTrades": 44
+      "stats": null,
+      "totalTrades": 0
     },
     {
       "name": "MNQ ORB 5-min",
@@ -58,32 +16,8 @@
       "type": "MNQ",
       "tf": "5min",
       "style": "Breakout",
-      "stats": {
-        "trades": 2,
-        "wins": 0,
-        "losses": 2,
-        "winRate": 0,
-        "totalPnl": -120,
-        "avgWin": 0,
-        "avgLoss": -60,
-        "profitFactor": null,
-        "maxDrawdown": 120,
-        "recent": [
-          {
-            "date": "15 Apr 2026",
-            "side": "LONG",
-            "pnl": -60,
-            "reason": "Stop loss hit 🛑"
-          },
-          {
-            "date": "13 Apr 2026",
-            "side": "SHORT",
-            "pnl": -60,
-            "reason": "Stop loss hit 🛑"
-          }
-        ]
-      },
-      "totalTrades": 2
+      "stats": null,
+      "totalTrades": 0
     },
     {
       "name": "MNQ VWAP Reversal",
@@ -100,38 +34,8 @@
       "type": "MNQ",
       "tf": "5min",
       "style": "Trend",
-      "stats": {
-        "trades": 3,
-        "wins": 1,
-        "losses": 2,
-        "winRate": 33.3,
-        "totalPnl": 0,
-        "avgWin": 100,
-        "avgLoss": -50,
-        "profitFactor": 1,
-        "maxDrawdown": 100,
-        "recent": [
-          {
-            "date": "16 Apr 2026",
-            "side": "LONG",
-            "pnl": 100,
-            "reason": "Take profit ✅"
-          },
-          {
-            "date": "16 Apr 2026",
-            "side": "SHORT",
-            "pnl": -50,
-            "reason": "Stop loss 🛑"
-          },
-          {
-            "date": "15 Apr 2026",
-            "side": "SHORT",
-            "pnl": -50,
-            "reason": "Stop loss 🛑"
-          }
-        ]
-      },
-      "totalTrades": 3
+      "stats": null,
+      "totalTrades": 0
     },
     {
       "name": "MNQ Follow 9:40",
@@ -139,50 +43,8 @@
       "type": "MNQ",
       "tf": "5min",
       "style": "Momentum",
-      "stats": {
-        "trades": 54,
-        "wins": 26,
-        "losses": 28,
-        "winRate": 48.1,
-        "totalPnl": 4152,
-        "avgWin": 362.96,
-        "avgLoss": -188.75,
-        "profitFactor": 1.79,
-        "maxDrawdown": 956.5,
-        "recent": [
-          {
-            "date": "16 Apr 2026",
-            "side": "LONG",
-            "pnl": 270,
-            "reason": "Take profit ✅"
-          },
-          {
-            "date": "14 Apr 2026",
-            "side": "LONG",
-            "pnl": 377,
-            "reason": "Force close 3:55pm ET"
-          },
-          {
-            "date": "13 Apr 2026",
-            "side": "SHORT",
-            "pnl": -101.5,
-            "reason": "Stop loss 🛑"
-          },
-          {
-            "date": "13 Apr 2026",
-            "side": "SHORT",
-            "pnl": -114.5,
-            "reason": "Stop loss 🛑"
-          },
-          {
-            "date": "10 Apr 2026",
-            "side": "LONG",
-            "pnl": -132,
-            "reason": "Stop loss 🛑"
-          }
-        ]
-      },
-      "totalTrades": 54
+      "stats": null,
+      "totalTrades": 0
     },
     {
       "name": "BTC Supertrend",
