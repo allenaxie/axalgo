@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-17T03:00:00.294Z",
+  "generated": "2026-04-17T03:05:32.558Z",
   "strategies": [
     {
       "name": "MNQ ORB 15-min",
@@ -233,15 +233,15 @@
       "tf": "15min",
       "style": "Momentum",
       "stats": {
-        "trades": 871,
-        "wins": 281,
-        "losses": 590,
-        "winRate": 32.3,
-        "totalPnl": 1403.15,
-        "avgWin": 99.07,
-        "avgLoss": -44.81,
-        "profitFactor": 1.05,
-        "maxDrawdown": 2095.74,
+        "trades": 669,
+        "wins": 211,
+        "losses": 458,
+        "winRate": 31.5,
+        "totalPnl": 5074.51,
+        "avgWin": 132.31,
+        "avgLoss": -49.88,
+        "profitFactor": 1.22,
+        "maxDrawdown": 1100.06,
         "recent": [
           {
             "date": "17 Apr 2026",
@@ -275,7 +275,7 @@
           }
         ]
       },
-      "totalTrades": 1742
+      "totalTrades": 1338
     }
   ]
 }
