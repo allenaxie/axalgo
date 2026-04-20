@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-20T15:00:01.374Z",
+  "generated": "2026-04-20T16:00:01.346Z",
   "strategies": [
     {
       "name": "MNQ ORB 15-min",
@@ -8,16 +8,22 @@
       "tf": "15min",
       "style": "Breakout",
       "stats": {
-        "trades": 45,
-        "wins": 14,
+        "trades": 46,
+        "wins": 15,
         "losses": 31,
-        "winRate": 31.1,
-        "totalPnl": -321.5,
-        "avgWin": 198.46,
+        "winRate": 32.6,
+        "totalPnl": -121.5,
+        "avgWin": 198.57,
         "avgLoss": -100,
-        "profitFactor": 0.9,
+        "profitFactor": 0.96,
         "maxDrawdown": 1121.5,
         "recent": [
+          {
+            "date": "20 Apr 2026",
+            "side": "SHORT",
+            "pnl": 200,
+            "reason": "Take profit hit ✅"
+          },
           {
             "date": "17 Apr 2026",
             "side": "LONG",
@@ -41,16 +47,10 @@
             "side": "LONG",
             "pnl": 200,
             "reason": "Take profit hit ✅"
-          },
-          {
-            "date": "10 Apr 2026",
-            "side": "SHORT",
-            "pnl": -100,
-            "reason": "Stop loss hit 🛑"
           }
         ]
       },
-      "totalTrades": 45
+      "totalTrades": 46
     },
     {
       "name": "MNQ ORB 5-min",
@@ -101,16 +101,22 @@
       "tf": "5min",
       "style": "Trend",
       "stats": {
-        "trades": 3,
-        "wins": 1,
+        "trades": 4,
+        "wins": 2,
         "losses": 2,
-        "winRate": 33.3,
-        "totalPnl": 0,
+        "winRate": 50,
+        "totalPnl": 100,
         "avgWin": 100,
         "avgLoss": -50,
-        "profitFactor": 1,
+        "profitFactor": 2,
         "maxDrawdown": 100,
         "recent": [
+          {
+            "date": "20 Apr 2026",
+            "side": "SHORT",
+            "pnl": 100,
+            "reason": "Take profit ✅"
+          },
           {
             "date": "16 Apr 2026",
             "side": "LONG",
@@ -131,7 +137,7 @@
           }
         ]
       },
-      "totalTrades": 3
+      "totalTrades": 4
     },
     {
       "name": "MNQ Follow 9:40",
