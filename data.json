@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-22T14:00:01.682Z",
+  "generated": "2026-04-22T15:00:01.382Z",
   "strategies": [
     {
       "name": "MNQ ORB 15-min",
@@ -146,16 +146,22 @@
       "tf": "5min",
       "style": "Momentum",
       "stats": {
-        "trades": 7,
-        "wins": 4,
+        "trades": 8,
+        "wins": 5,
         "losses": 3,
-        "winRate": 57.1,
-        "totalPnl": 736.5,
-        "avgWin": 278.63,
+        "winRate": 62.5,
+        "totalPnl": 841.5,
+        "avgWin": 243.9,
         "avgLoss": -126,
-        "profitFactor": 2.95,
+        "profitFactor": 3.23,
         "maxDrawdown": 216,
         "recent": [
+          {
+            "date": "22 Apr 2026",
+            "side": "LONG",
+            "pnl": 105,
+            "reason": "Take profit ✅"
+          },
           {
             "date": "21 Apr 2026",
             "side": "LONG",
@@ -179,16 +185,10 @@
             "side": "LONG",
             "pnl": 270,
             "reason": "Take profit ✅"
-          },
-          {
-            "date": "14 Apr 2026",
-            "side": "LONG",
-            "pnl": 377,
-            "reason": "Force close 3:55pm ET"
           }
         ]
       },
-      "totalTrades": 7
+      "totalTrades": 8
     },
     {
       "name": "BTC Supertrend",
