@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-22T06:00:01.551Z",
+  "generated": "2026-04-22T06:55:35.301Z",
   "strategies": [
     {
       "name": "MNQ ORB 15-min",
@@ -8,15 +8,15 @@
       "tf": "15min",
       "style": "Breakout",
       "stats": {
-        "trades": 47,
-        "wins": 15,
-        "losses": 32,
-        "winRate": 31.9,
-        "totalPnl": -221.5,
-        "avgWin": 198.57,
+        "trades": 6,
+        "wins": 4,
+        "losses": 2,
+        "winRate": 66.7,
+        "totalPnl": 600,
+        "avgWin": 200,
         "avgLoss": -100,
-        "profitFactor": 0.93,
-        "maxDrawdown": 1121.5,
+        "profitFactor": 4,
+        "maxDrawdown": 100,
         "recent": [
           {
             "date": "21 Apr 2026",
@@ -50,7 +50,7 @@
           }
         ]
       },
-      "totalTrades": 47
+      "totalTrades": 6
     },
     {
       "name": "MNQ ORB 5-min",
@@ -146,15 +146,15 @@
       "tf": "5min",
       "style": "Momentum",
       "stats": {
-        "trades": 57,
-        "wins": 28,
-        "losses": 29,
-        "winRate": 49.1,
-        "totalPnl": 4457.5,
-        "avgWin": 353.73,
-        "avgLoss": -187.83,
-        "profitFactor": 1.82,
-        "maxDrawdown": 956.5,
+        "trades": 7,
+        "wins": 4,
+        "losses": 3,
+        "winRate": 57.1,
+        "totalPnl": 736.5,
+        "avgWin": 278.63,
+        "avgLoss": -126,
+        "profitFactor": 2.95,
+        "maxDrawdown": 216,
         "recent": [
           {
             "date": "21 Apr 2026",
@@ -188,7 +188,7 @@
           }
         ]
       },
-      "totalTrades": 57
+      "totalTrades": 7
     },
     {
       "name": "BTC Supertrend",
@@ -206,16 +206,22 @@
       "tf": "1H",
       "style": "Momentum",
       "stats": {
-        "trades": 3,
-        "wins": 2,
+        "trades": 4,
+        "wins": 3,
         "losses": 1,
-        "winRate": 66.7,
-        "totalPnl": 72.63,
-        "avgWin": 61.31,
+        "winRate": 75,
+        "totalPnl": 172.63,
+        "avgWin": 74.21,
         "avgLoss": -50,
-        "profitFactor": 2.45,
+        "profitFactor": 4.45,
         "maxDrawdown": 50,
         "recent": [
+          {
+            "date": "22 Apr 2026",
+            "side": "LONG",
+            "pnl": 100,
+            "reason": "Take profit ✅"
+          },
           {
             "date": "17 Apr 2026",
             "side": "LONG",
@@ -236,7 +242,7 @@
           }
         ]
       },
-      "totalTrades": 7
+      "totalTrades": 8
     },
     {
       "name": "BTC StochRSI",
@@ -245,15 +251,15 @@
       "tf": "15min",
       "style": "Momentum",
       "stats": {
-        "trades": 972,
-        "wins": 303,
-        "losses": 669,
-        "winRate": 31.2,
-        "totalPnl": 6790.87,
-        "avgWin": 132.62,
-        "avgLoss": -49.92,
-        "profitFactor": 1.2,
-        "maxDrawdown": 1683.42,
+        "trades": 12,
+        "wins": 6,
+        "losses": 6,
+        "winRate": 50,
+        "totalPnl": 341.86,
+        "avgWin": 97.59,
+        "avgLoss": -40.62,
+        "profitFactor": 2.4,
+        "maxDrawdown": 123.02,
         "recent": [
           {
             "date": "17 Apr 2026",
@@ -287,7 +293,7 @@
           }
         ]
       },
-      "totalTrades": 1944
+      "totalTrades": 24
     }
   ]
 }
