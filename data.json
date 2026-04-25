@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-25T04:00:00.665Z",
+  "generated": "2026-04-25T05:00:00.946Z",
   "strategies": [
     {
       "name": "MNQ ORB 15-min",
@@ -248,7 +248,7 @@
           }
         ]
       },
-      "totalTrades": 8
+      "totalTrades": 9
     },
     {
       "name": "BTC StochRSI",
