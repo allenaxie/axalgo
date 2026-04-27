@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-27T14:00:01.981Z",
+  "generated": "2026-04-27T15:00:01.025Z",
   "strategies": [
     {
       "name": "MNQ ORB 15-min",
@@ -8,16 +8,22 @@
       "tf": "15min",
       "style": "Breakout",
       "stats": {
-        "trades": 9,
+        "trades": 10,
         "wins": 5,
-        "losses": 4,
-        "winRate": 55.6,
-        "totalPnl": 600,
+        "losses": 5,
+        "winRate": 50,
+        "totalPnl": 500,
         "avgWin": 200,
         "avgLoss": -100,
-        "profitFactor": 2.5,
-        "maxDrawdown": 200,
+        "profitFactor": 2,
+        "maxDrawdown": 300,
         "recent": [
+          {
+            "date": "27 Apr 2026",
+            "side": "SHORT",
+            "pnl": -100,
+            "reason": "Stop loss hit 🛑"
+          },
           {
             "date": "24 Apr 2026",
             "side": "SHORT",
@@ -41,16 +47,10 @@
             "side": "LONG",
             "pnl": -100,
             "reason": "Stop loss hit 🛑"
-          },
-          {
-            "date": "20 Apr 2026",
-            "side": "SHORT",
-            "pnl": 200,
-            "reason": "Take profit hit ✅"
           }
         ]
       },
-      "totalTrades": 9
+      "totalTrades": 10
     },
     {
       "name": "MNQ EMA Cross",
