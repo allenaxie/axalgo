@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-27T00:00:00.356Z",
+  "generated": "2026-04-27T01:00:01.043Z",
   "strategies": [
     {
       "name": "MNQ ORB 15-min",
@@ -212,16 +212,22 @@
       "tf": "1H",
       "style": "Momentum",
       "stats": {
-        "trades": 4,
-        "wins": 3,
+        "trades": 5,
+        "wins": 4,
         "losses": 1,
-        "winRate": 75,
-        "totalPnl": 172.63,
-        "avgWin": 74.21,
+        "winRate": 80,
+        "totalPnl": 272.63,
+        "avgWin": 80.66,
         "avgLoss": -50,
-        "profitFactor": 4.45,
+        "profitFactor": 6.45,
         "maxDrawdown": 50,
         "recent": [
+          {
+            "date": "25 Apr 2026",
+            "side": "LONG",
+            "pnl": 100,
+            "reason": "Take profit ✅"
+          },
           {
             "date": "22 Apr 2026",
             "side": "LONG",
@@ -248,7 +254,7 @@
           }
         ]
       },
-      "totalTrades": 9
+      "totalTrades": 10
     },
     {
       "name": "BTC StochRSI",
