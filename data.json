@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-27T17:00:01.125Z",
+  "generated": "2026-04-27T18:00:00.803Z",
   "strategies": [
     {
       "name": "MNQ ORB 15-min",
@@ -59,16 +59,22 @@
       "tf": "5min",
       "style": "Trend",
       "stats": {
-        "trades": 5,
-        "wins": 2,
+        "trades": 6,
+        "wins": 3,
         "losses": 3,
-        "winRate": 40,
-        "totalPnl": 50,
+        "winRate": 50,
+        "totalPnl": 150,
         "avgWin": 100,
         "avgLoss": -50,
-        "profitFactor": 1.33,
+        "profitFactor": 2,
         "maxDrawdown": 100,
         "recent": [
+          {
+            "date": "28 Apr 2026",
+            "side": "LONG",
+            "pnl": 100,
+            "reason": "Take profit ✅"
+          },
           {
             "date": "24 Apr 2026",
             "side": "SHORT",
@@ -92,16 +98,10 @@
             "side": "SHORT",
             "pnl": -50,
             "reason": "Stop loss 🛑"
-          },
-          {
-            "date": "15 Apr 2026",
-            "side": "SHORT",
-            "pnl": -50,
-            "reason": "Stop loss 🛑"
           }
         ]
       },
-      "totalTrades": 5
+      "totalTrades": 6
     },
     {
       "name": "MNQ Follow 9:40",
@@ -110,16 +110,22 @@
       "tf": "5min",
       "style": "Momentum",
       "stats": {
-        "trades": 9,
+        "trades": 10,
         "wins": 5,
-        "losses": 4,
-        "winRate": 55.6,
-        "totalPnl": 654,
+        "losses": 5,
+        "winRate": 50,
+        "totalPnl": 523.5,
         "avgWin": 243.9,
-        "avgLoss": -141.38,
-        "profitFactor": 2.16,
-        "maxDrawdown": 216,
+        "avgLoss": -139.2,
+        "profitFactor": 1.75,
+        "maxDrawdown": 318,
         "recent": [
+          {
+            "date": "27 Apr 2026",
+            "side": "SHORT",
+            "pnl": -130.5,
+            "reason": "Stop loss 🛑"
+          },
           {
             "date": "23 Apr 2026",
             "side": "LONG",
@@ -143,16 +149,10 @@
             "side": "LONG",
             "pnl": -162,
             "reason": "Stop loss 🛑"
-          },
-          {
-            "date": "17 Apr 2026",
-            "side": "LONG",
-            "pnl": 305,
-            "reason": "Take profit ✅"
           }
         ]
       },
-      "totalTrades": 9
+      "totalTrades": 10
     },
     {
       "name": "BTC MACD Cross",
