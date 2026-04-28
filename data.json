@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-28T15:00:01.111Z",
+  "generated": "2026-04-28T16:00:00.318Z",
   "strategies": [
     {
       "name": "MNQ ORB 15-min",
@@ -110,16 +110,22 @@
       "tf": "5min",
       "style": "Momentum",
       "stats": {
-        "trades": 10,
+        "trades": 11,
         "wins": 5,
-        "losses": 5,
-        "winRate": 50,
-        "totalPnl": 523.5,
+        "losses": 6,
+        "winRate": 45.5,
+        "totalPnl": 244.5,
         "avgWin": 243.9,
-        "avgLoss": -139.2,
-        "profitFactor": 1.75,
-        "maxDrawdown": 318,
+        "avgLoss": -162.5,
+        "profitFactor": 1.25,
+        "maxDrawdown": 597,
         "recent": [
+          {
+            "date": "28 Apr 2026",
+            "side": "LONG",
+            "pnl": -279,
+            "reason": "Stop loss 🛑"
+          },
           {
             "date": "27 Apr 2026",
             "side": "SHORT",
@@ -143,16 +149,10 @@
             "side": "LONG",
             "pnl": 162.5,
             "reason": "Take profit ✅"
-          },
-          {
-            "date": "20 Apr 2026",
-            "side": "LONG",
-            "pnl": -162,
-            "reason": "Stop loss 🛑"
           }
         ]
       },
-      "totalTrades": 10
+      "totalTrades": 11
     },
     {
       "name": "BTC MACD Cross",
